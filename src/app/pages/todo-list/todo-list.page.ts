@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  Todo, TodoService } from '../../services/todo.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,17 +9,11 @@ import {  Todo, TodoService } from '../../services/todo.service';
 })
 export class TodoListPage implements OnInit {
 
-  todos: Todo[];
+  public todos: Observable<Todo[]>;
 
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
-    this.todoService.getTodos().subscribe(res => {
-      this.todos = res;
-    });
-  }
-
-  remove(item) {
-    this.todoService.removeTodo(item.id);
+    this.todos = this.todoService.getTodos();
   }
 }

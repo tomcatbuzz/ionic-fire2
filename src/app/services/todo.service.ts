@@ -4,6 +4,7 @@ import { map, take } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 export interface Todo {
+  id?: string;
   task: string;
   priority: number;
   createdAt: number;
@@ -34,8 +35,14 @@ export class TodoService {
      return this.todos;
    }
 
-   getTodo(id) {
-     return this.todoCollection.doc<Todo>(id).valueChanges();
+   getTodo(id: string) {
+     return this.todoCollection.doc<Todo>(id).valueChanges().pipe(
+       take(1),
+       map(todo => {
+         todo.id = id;
+         return todo;
+       })
+     );
    }
 
    addTodo(todo: Todo) {
@@ -46,7 +53,7 @@ export class TodoService {
      return this.todoCollection.doc(id).update(todo);
    }
 
-   removeTodo(id) {
+   removeTodo(id: string) {
     return this.todoCollection.doc(id).delete();
    }
 }
