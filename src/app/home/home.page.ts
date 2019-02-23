@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  handlePress() {
+    console.log("press");
+  }
+
+  handlePan(ev) {
+    console.log(ev.center);
+  }
+
+  handleSwipe() {
+    console.log("swipe")
+  }
+
 }
