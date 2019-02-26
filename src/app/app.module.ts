@@ -18,16 +18,14 @@ import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-br
 import * as Hammer from 'hammerjs';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { IonicStorageModule } from '@ionic/storage';
-
-
-
+import { NotifyService } from './services/notify.service';
 
 export class CustomHammerConfig extends HammerGestureConfig {
   overrides = {
     'pan': {
       direction: Hammer.DIRECTION_ALL
     }
-  }
+  };
 }
 
 @NgModule({
@@ -40,11 +38,12 @@ export class CustomHammerConfig extends HammerGestureConfig {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     IonicStorageModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    NotifyService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
     { provide: FirestoreSettingsToken, useValue: {} }

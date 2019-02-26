@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -9,21 +9,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-card (press)="handlePress()">
-      <ion-card-content>
-        Press
-      </ion-card-content>
-    </ion-card>
-    <ion-card (pan)="handlePan($event)">
-      <ion-card-content>
-        Pan
-      </ion-card-content>
-    </ion-card>
-    <ion-card (swipe)="handleSwipe()">
-      <ion-card-content>
-        Swipe
-      </ion-card-content>
-    </ion-card>
-    
+<ion-content [scrollEvents]="true" parallaxHeader="https://ununsplash.imgix.net/photo-1421091242698-34f6ad7fc088?fit=crop&fm=jpg&h=650&q=75&w=950" [parallaxHeight]="400">
+	<div class="main-content">
+		<h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2>
+		<h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2>
+		<h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2>
+		<h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2>
+		<h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2>
+		<h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2><h2>Content</h2>
+	</div>
 </ion-content>
