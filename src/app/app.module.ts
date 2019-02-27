@@ -38,7 +38,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     IonicStorageModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('combined-sw.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,
