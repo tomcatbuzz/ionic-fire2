@@ -17,7 +17,15 @@ const routes: Routes = [
   },
   { path: 'todo-list', loadChildren: './pages/todo-list/todo-list.module#TodoListPageModule' },
   { path: 'details', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' },
-  { path: 'details/:id', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' }
+  { path: 'details/:id', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' },
+  {
+    path: 'slideshow',
+    loadChildren: './slideshow/slideshow.module#SlideshowComponentModule'
+  },
+  {
+    path: 'video-bg',
+    loadChildren: './video-bg/video-bg.module#VideoBgComponentModule'
+  }
 ];
 
 @NgModule({

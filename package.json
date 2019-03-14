@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "live": "http-server -p 8080 -c-1 www/ionFire2"
+    "live": "http-server -p 8080 -c-1 ./www/ionFire2"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +31,9 @@
     "@ionic/storage": "^2.2.0",
     "core-js": "^2.5.4",
     "firebase": "^5.8.3",
+    "gl-ionic-background-video": "0.0.5",
     "hammerjs": "^2.0.8",
+    "ngx-swiper-wrapper": "^7.2.1",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.29"
   },
@@ -51,7 +53,7 @@
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^4.0.0",
+    "karma": "^4.0.1",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",

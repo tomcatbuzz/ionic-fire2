@@ -19,6 +19,7 @@ import * as Hammer from 'hammerjs';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { IonicStorageModule } from '@ionic/storage';
 import { NotifyService } from './services/notify.service';
+import { AnimateItemsDirective } from './directives/animate-items.directive';
 
 export class CustomHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -29,7 +30,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AnimateItemsDirective],
   entryComponents: [],
   imports: [
     BrowserModule,
