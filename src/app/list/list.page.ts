@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ListPage {
   public messages;
-  
+
   constructor() {
     this.messages = new Array(100).fill({title: 'Tony is awesome'});
   }
