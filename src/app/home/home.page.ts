@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeSwitcherService } from '../services/theme-switcher.service';
 
 @Component({
   selector: 'app-home',
@@ -7,16 +8,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  handlePress() {
-    console.log("press");
+  constructor(private themeSwitcher: ThemeSwitcherService) {
+    this.themeSwitcher.cycleTheme();
   }
+  
 
-  handlePan(ev) {
-    console.log(ev.center);
-  }
+  // handlePress() {
+  //   console.log("press");
+  // }
 
-  handleSwipe() {
-    console.log("swipe")
-  }
+  // handlePan(ev) {
+  //   console.log(ev.center);
+  // }
+
+  // handleSwipe() {
+  //   console.log("swipe");
+  // }
 
 }
