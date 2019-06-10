@@ -20,7 +20,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { IonicStorageModule } from '@ionic/storage';
 import { NotifyService } from './services/notify.service';
 import { AnimateItemsDirective } from './directives/animate-items.directive';
-import { ThemeSwitcherService } from './services/theme-switcher.service';
 
 export class CustomHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -39,14 +38,13 @@ export class CustomHammerConfig extends HammerGestureConfig {
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    IonicStorageModule,
+    IonicStorageModule.forRoot(),
     ServiceWorkerModule.register('combined-sw.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,
     SplashScreen,
     NotifyService,
-    ThemeSwitcherService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig },
     { provide: FirestoreSettingsToken, useValue: {} }
