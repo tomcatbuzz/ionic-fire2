@@ -6,10 +6,10 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'YOUR KEY HERE',
-      authDomain: 'vue-devmeetups.firebaseapp.com',
-      databaseURL: 'https://vue-devmeetups.firebaseio.com',
-      projectId: 'vue-devmeetups',
-      storageBucket: 'vue-devmeetups.appspot.com'
+      authDomain: 'someName.firebaseapp.com',
+      databaseURL: 'https://some name.firebaseio.com',
+      projectId: 'Name',
+      storageBucket: 'coolness.appspot.com'
   }
 };
 
