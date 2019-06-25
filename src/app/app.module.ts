@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AngularFireModule } from '@angular/fire/';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
@@ -20,6 +21,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { IonicStorageModule } from '@ionic/storage';
 import { NotifyService } from './services/notify.service';
 import { AnimateItemsDirective } from './directives/animate-items.directive';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 export class CustomHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -37,7 +39,9 @@ export class CustomHammerConfig extends HammerGestureConfig {
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     IonicStorageModule.forRoot(),
     ServiceWorkerModule.register('combined-sw.js', { enabled: environment.production }),
   ],

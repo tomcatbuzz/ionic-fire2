@@ -1,7 +1,17 @@
 service cloud.firestore {
   match /databases/{database}/documents {
+  	function isSignedIn() {
+    return request.auth != null;
+    }
     match /{document=**} {
-      allow read, write;
+      allow read: if isSignedIn();
+    }
+    match /users/{uid} {
+    	allow write: if request.auth.uid == uid
+    }
+    match /todos/{todos} {
+    	allow create: if request.auth.uid == request.resource.data.uid
+      allow update, delete: if request.auth.uid == resource.data.uid
     }
   }
 }

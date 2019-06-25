@@ -1,4 +1,3 @@
-// http://ionicframework.com/docs/theming/
 @import '~@ionic/angular/css/core.css';
 @import '~@ionic/angular/css/normalize.css';
 @import '~@ionic/angular/css/structure.css';
@@ -9,3 +8,20 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+.autumn {
+  --color: #F78154;
+}
+
+.dark {
+  --color: #8CBA80;
+}
+
+.neon {
+  --color: #39BFBD;
+}
+
+.default {
+  --color: #3880ff;
+}

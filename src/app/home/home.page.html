@@ -8,35 +8,47 @@
       Home
     </ion-title>
     
-      <ion-icon size="large" slot="end" name="color-fill"></ion-icon>
+      <ion-icon size="large" slot="end" name="color-fill" (click)="presentActionSheet()"></ion-icon>
   
   </ion-toolbar>
 </ion-header>
 
 <ion-content [scrollEvents]="true" parallaxHeader="https://ununsplash.imgix.net/photo-1421091242698-34f6ad7fc088?fit=crop&fm=jpg&h=650&q=75&w=950" [parallaxHeight]="400">
-	<ion-button expand="block" color="medium" (click)="changeTheme('autumn')">Autumn</ion-button>
-    <ion-button expand="block" color="medium" (click)="changeTheme('night')">Dark</ion-button>
-    <ion-button expand="block" color="medium" (click)="changeTheme('neon')">Neon</ion-button>
-    <ion-button expand="block" color="medium" (click)="changeTheme('')">Default</ion-button>
-    <hr>
-
-    <ion-button color="primary">Primary</ion-button>
-    <ion-button color="secondary">Secondary</ion-button>
-    <ion-button color="tertiary">Tertiary</ion-button>
-    <ion-button color="medium">Medium</ion-button>
-    <ion-button color="dark">Dark</ion-button>
-
-    <ion-button color="primary" class="foo">Foo</ion-button>
-    <hr>
-    <ion-checkbox color="primary" checked></ion-checkbox>
-    <ion-checkbox color="secondary"></ion-checkbox>
-    <ion-checkbox color="danger" checked></ion-checkbox>
-    <ion-checkbox color="dark" checked></ion-checkbox>
+	     
+    <div class="main-content">
+        <ion-button color="primary">Primary</ion-button>
+        <ion-button color="secondary">Secondary</ion-button>
+        <ion-button color="tertiary">Tertiary</ion-button>
+        <ion-button color="medium">Medium</ion-button>
+        <ion-button color="dark">Dark</ion-button>
+        <ion-button color="primary" class="foo">Foo</ion-button>
+    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. .</h2>
+    <h2>Test content</h2>
+    <h2>Test content</h2>
+    <h2>Test content</h2>
+    <h2>Test content</h2>
+    <h2>Test content</h2>
+    <h2>Test content</h2>
+    </div>
 </ion-content>
-<div>
-Test content 
-Test content
-Test content
-Test content 
-Test content
-</div>
+
+<ion-footer >
+    <ion-toolbar>
+        <ion-tabs>
+            <!-- Tab bar -->
+            <ion-tab-bar slot="bottom" color="primary">
+              <ion-tab-button tab="account">
+                <ion-icon name="person"></ion-icon>
+              </ion-tab-button>
+              <ion-tab-button tab="contact">
+                <ion-icon name="call"></ion-icon>
+              </ion-tab-button>
+              <ion-tab-button tab="settings">
+                <ion-icon name="settings"></ion-icon>
+              </ion-tab-button>
+            </ion-tab-bar>
+          </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
+
+
