@@ -43,7 +43,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     AngularFirestoreModule,
     AngularFireStorageModule,
     IonicStorageModule.forRoot(),
-    ServiceWorkerModule.register('combined-sw.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('/combined-sw.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,
