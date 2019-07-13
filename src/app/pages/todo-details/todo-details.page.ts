@@ -27,10 +27,10 @@ export class TodoDetailsPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
   }
 
   ionViewWillEnter() {
+    this.id = this.route.snapshot.paramMap.get('id');
     if (this.id) {
       this.todoService.getTodo(this.id).subscribe(todo => {
         this.todo = todo;
@@ -40,7 +40,7 @@ export class TodoDetailsPage implements OnInit {
 
   addTodo() {
     this.todoService.addTodo(this.todo).then(() => {
-      this.router.navigateByUrl('todo-list');
+      this.router.navigate(['/todo-list']);
       this.showToast('Todo Added');
     }, err => {
       this.showToast('There was a problem adding your Todo');
@@ -49,7 +49,7 @@ export class TodoDetailsPage implements OnInit {
 
   updateTodo() {
     this.todoService.addTodo(this.todo).then(() => {
-      this.router.navigateByUrl('todo-list');
+      this.router.navigate(['/todo-list']);
       this.showToast('Todo Updated');
     }, err => {
       this.showToast('There was a problem updating your Todo');
@@ -58,7 +58,7 @@ export class TodoDetailsPage implements OnInit {
 
   removeTodo() {
     this.todoService.removeTodo(this.todo.id).then(() => {
-      this.router.navigateByUrl('todo-list');
+      this.router.navigate(['/todo-list']);
       this.showToast('Todo Deleted');
     }, err => {
       this.showToast('There was a problem deleting your Todo');
